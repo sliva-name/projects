@@ -90,43 +90,40 @@
         </div>
       </div>
 
-      <!-- Certifications -->
+      <!-- Achievements -->
       <div class="mt-20 lg:mt-32">
-        <h3 class="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 text-center mb-12 lg:mb-16">Сертификаты</h3>
-        <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-10">
-          <div
-            v-for="cert in certifications"
-            :key="cert.name"
-            class="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 group border border-gray-100/50"
-          >
+        <h3 class="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 text-center mb-12 lg:mb-16">Достижения</h3>
+        <div class="grid grid-cols-1 xl:grid-cols-1 gap-8 lg:gap-10 max-w-4xl mx-auto">
+          <div class="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 group border border-gray-100/50">
             <div class="flex items-start gap-6">
-              <div class="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 rounded-3xl flex items-center justify-center flex-shrink-0 shadow-xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+              <div class="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500 rounded-3xl flex items-center justify-center flex-shrink-0 shadow-xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                 <svg class="w-8 h-8 lg:w-10 lg:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
                 </svg>
               </div>
 
               <div class="flex-1">
-                <h4 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{{ cert.name }}</h4>
-                <p class="text-blue-600 font-medium text-lg lg:text-xl mb-4">{{ cert.issuer }}</p>
+                <h4 class="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">Хакатон "Цифровой прорыв"</h4>
+                <p class="text-blue-600 font-medium text-lg lg:text-xl mb-4">Финалист • 4-е место</p>
                 <p class="text-gray-600 text-base lg:text-lg mb-6 flex items-center gap-2">
                   <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                   </svg>
-                  {{ cert.date }}
+                  Краснодар, 2022
                 </p>
 
-                <a
-                  v-if="cert.url"
-                  :href="cert.url"
-                  target="_blank"
-                  class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:from-blue-500 hover:to-purple-500 transition-all duration-300 hover:shadow-lg hover:scale-105"
-                >
-                  Посмотреть сертификат
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                  </svg>
-                </a>
+                <p class="text-gray-700 text-base lg:text-lg mb-6 leading-relaxed">
+                  Участвовал в региональном этапе всероссийского хакатона "Цифровой прорыв".
+                  В составе команды разработали решение для оптимизации бизнес-процессов в сфере цифровой трансформации.
+                  Проект получил высокую оценку жюри и позволил войти в топ-4 команд региона.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Командная работа</span>
+                  <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Инновации</span>
+                  <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Техническое решение</span>
+                </div>
               </div>
             </div>
           </div>
@@ -139,5 +136,5 @@
 <script setup>
 import { useResumeStore } from '@/stores/resume'
 
-const { skills, certifications } = useResumeStore()
+const { skills } = useResumeStore()
 </script>

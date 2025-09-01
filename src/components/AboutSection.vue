@@ -73,7 +73,7 @@
             <h3 class="text-xl font-semibold text-gray-900 mb-6">Технологии с которыми я работаю:</h3>
             <div class="flex flex-wrap gap-3">
               <span
-                v-for="(tech, index) in allTechnologies.slice(0, 12)"
+                v-for="tech in keyTechnologies"
                 :key="tech"
                 class="group px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 rounded-full text-sm font-medium hover:from-blue-100 hover:to-indigo-100 hover:shadow-lg hover:scale-105 transition-all duration-300 border border-blue-200/50"
               >
@@ -142,5 +142,11 @@ import { useResumeStore } from '@/stores/resume'
 import FadeIn from './FadeIn.vue'
 import AnimatedCounter from './AnimatedCounter.vue'
 
-const { about, experience, projects, education, languages, skills, allTechnologies } = useResumeStore()
+  const { about, experience, projects, education, languages, skills, allTechnologies } = useResumeStore()
+
+  // Ключевые технологии для отображения
+  const keyTechnologies = [
+    'PHP', 'Laravel', 'Vue.js', 'MySQL', 'PostgreSQL', 'JavaScript',
+    'HTML/CSS', 'Git', 'Docker', 'REST API', 'Redis', 'Yii'
+  ]
 </script>

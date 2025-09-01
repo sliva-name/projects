@@ -9,7 +9,7 @@ export const useResumeStore = defineStore('resume', () => {
     email: 'antyuhov2@gmail.com',
     phone: '+7 (901) 105-33-86',
     location: 'Краснодар',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
+    avatar: '/src/assets/img/photo_2025-09-02_02-18-53.jpg',
     github: 'https://github.com/sliva-name',
     website: 'https://t.me/slivario',
     vk: 'https://vk.com/extrateam'
@@ -278,21 +278,7 @@ export const useResumeStore = defineStore('resume', () => {
     { name: 'Английский', level: 'Чтение технической документации', proficiency: 60 }
   ])
 
-  // Сертификаты
-  const certifications = ref([
-    {
-      name: 'PHP Developer Certification',
-      issuer: 'Zend Technologies',
-      date: '2023',
-      url: 'https://www.zend.com/training/php-certification'
-    },
-    {
-      name: 'Laravel Developer Certification',
-      issuer: 'Laravel',
-      date: '2022',
-      url: 'https://exam.laravel.com/'
-    }
-  ])
+
 
   // Computed properties
   const featuredProjects = computed(() =>
@@ -346,7 +332,6 @@ export const useResumeStore = defineStore('resume', () => {
     skills,
     projects,
     languages,
-    certifications,
 
     // Computed
     featuredProjects,
