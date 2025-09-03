@@ -172,7 +172,7 @@
               <!-- Technologies -->
               <div class="flex flex-wrap gap-1 mb-4">
                 <span
-                  v-for="tech in project.technologies.slice(0, 3)"
+                  v-for="tech in project.technologies"
                   :key="tech"
                   class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs font-medium"
                 >
