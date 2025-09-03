@@ -109,11 +109,11 @@ export const useResumeStore = defineStore('resume', () => {
         { name: 'PHP', level: 100 },
         { name: 'Laravel', level: 100 },
         { name: 'Yii', level: 60 },
-        { name: 'MySQL', level: 75 },
-        { name: 'PostgreSQL', level: 75 },
+        { name: 'MySQL', level: 100 },
+        { name: 'PostgreSQL', level: 100 },
         { name: 'REST API', level: 100 },
-        { name: 'Redis', level: 50 },
-        { name: 'RabbitMQ', level: 50 }
+        { name: 'Redis', level: 100 },
+        { name: 'RabbitMQ', level: 100 }
       ]
     },
     {
@@ -142,54 +142,11 @@ export const useResumeStore = defineStore('resume', () => {
 
   // Проекты
   const projects = ref([
+
     {
       id: 1,
-      title: 'Высоконагруженная CRM-система',
-      description: 'Разработка enterprise-level CRM с микросервисной архитектурой, очередями и интеграцией с платежными системами',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-      technologies: ['PHP', 'Laravel', 'Yii', 'PostgreSQL', 'Redis', 'RabbitMQ', 'Docker', 'REST API'],
-      github: 'https://github.com/sliva-name/enterprise-crm',
-      demo: 'https://crm-demo.vercel.app',
-      demoAvailable: false,
-      featured: true
-    },
-    {
-      id: 2,
-      title: 'API Gateway с микросервисами',
-      description: 'Масштабируемый API Gateway с балансировкой нагрузки, мониторингом и автоматическим масштабированием',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
-      technologies: ['PHP', 'Yii', 'Docker', 'RabbitMQ', 'Nginx', 'MySQL', 'CI/CD'],
-      github: 'https://github.com/sliva-name/microservices-gateway',
-      demo: 'https://api-gateway-demo.vercel.app',
-      demoAvailable: true,
-      featured: true
-    },
-    {
-      id: 3,
-      title: 'Система управления заказами',
-      description: 'Комплексная система для управления заказами с интеграцией внешних сервисов и аналитикой',
-      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop',
-      technologies: ['PHP', 'Laravel', 'Vue.js', 'PostgreSQL', 'REST API', 'Bootstrap'],
-      github: 'https://github.com/sliva-name/order-management',
-      demo: 'https://orders-demo.vercel.app',
-      demoAvailable: false,
-      featured: false
-    },
-    {
-      id: 4,
-      title: 'Платформа для онлайн-обучения',
-      description: 'LMS платформа с видеокурсами, тестированием и прогресс-трекингом',
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop',
-      technologies: ['PHP', 'Laravel', 'JavaScript', 'MySQL', 'jQuery', 'HTML/CSS'],
-      github: 'https://github.com/sliva-name/lms-platform',
-      demo: 'https://lms-demo.vercel.app',
-      demoAvailable: true,
-      featured: false
-    },
-    {
-      id: 5,
       title: 'SaaS E-commerce Platform',
-      description: 'Создание мультитенантной E-commerce платформы с архитектурой "Theme as a Package". Полная система тем, биллинг, API Gateway',
+      description: 'Создание мультитенантной E-commerce платформы с архитектурой "Theme as a Package". Полная система тем, биллинг, логистика',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop',
       technologies: ['PHP', 'Laravel', 'Vue.js', 'PostgreSQL', 'Redis', 'Docker', 'SaaS', 'Theme System'],
       github: 'https://github.com/sliva-name/saasApp',
@@ -198,10 +155,10 @@ export const useResumeStore = defineStore('resume', () => {
       featured: true
     },
     {
-      id: 6,
+      id: 2,
       title: 'Moonshine Carousel Package',
       description: 'Разработка открытого пакета карусели для Laravel административной панели Moonshine. Улучшение UX и функциональности админки',
-      image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8f2c493?w=600&h=400&fit=crop',
+      image: 'https://github.com/moonshine-software/moonshine/raw/3.x/art/new.jpg',
       technologies: ['PHP', 'Laravel', 'JavaScript', 'Vue.js', 'Composer', 'Open Source'],
       github: 'https://github.com/sliva-name/moonshine-carousel',
       demo: 'https://packagist.org/packages/sliva-name/moonshine-carousel',
@@ -209,21 +166,21 @@ export const useResumeStore = defineStore('resume', () => {
       featured: false
     },
     {
-      id: 7,
-      title: 'Fablaw - Юридическая фирма',
-      description: 'Полнофункциональный сайт юридической фирмы с системой управления контентом, формой обратной связи и административной панелью',
-      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=400&fit=crop',
-      technologies: ['PHP', 'Yii', 'MySQL', 'JavaScript', 'jQuery', 'HTML/CSS', 'Bootstrap'],
+      id: 3,
+      title: 'Fablaw - Услуги банкротства физических лиц',
+      description: 'Специализированный сайт юридической фирмы по банкротству физических лиц. Включает калькулятор стоимости услуг, формы подачи заявок, интеграцию с Яндекс.Картами для офисов по всей России и систему управления контентом',
+      image: '/src/assets/screenshots/fablaw.png',
+      technologies: ['PHP', 'Yii', 'MySQL', 'JavaScript', 'jQuery', 'HTML/CSS', 'Bootstrap', 'Yandex Maps API'],
       demo: 'https://fablaw.ru/',
       demoAvailable: true,
       featured: false,
       isPrivate: true
     },
     {
-      id: 8,
+      id: 4,
       title: 'Express Bankrot - Банкротство онлайн',
       description: 'Сервис онлайн-банкротства с системой подачи заявок, расчета стоимости услуг и интеграцией с платежными системами',
-      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop',
+      image: '/src/assets/screenshots/express-bankrot.png',
       technologies: ['PHP', 'Yii', 'PostgreSQL', 'JavaScript', 'jQuery', 'REST API', 'Payment Gateway'],
       demo: 'https://www.express-bankrot.ru/',
       demoAvailable: true,
@@ -231,45 +188,40 @@ export const useResumeStore = defineStore('resume', () => {
       isPrivate: true
     },
     {
-      id: 9,
-      title: 'Корпоративный сайт строительной компании',
-      description: 'Полнофункциональный корпоративный сайт с каталогом услуг, портфолио проектов, формой обратной связи и системой управления контентом',
+      id: 5,
+      title: 'Сайт страховой компании',
+      description: 'Полнофункциональный сайт с полным прохождением этапов услуг',
       image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop',
-      technologies: ['PHP', 'Laravel', 'MySQL', 'JavaScript', 'Vue.js', 'HTML/CSS', 'Bootstrap', 'CMS'],
-      demoAvailable: false,
+      technologies: ['PHP', 'Laravel', 'PostgreSQL', 'JavaScript', 'Vue.js', 'HTML/CSS', 'Tailwind'],
+      demoAvailable: true,
+      demo: 'https://12polisov.ru/',
       featured: false,
       isPrivate: true
     },
     {
-      id: 10,
-      title: 'Интернет-магазин товаров для дома',
-      description: 'E-commerce платформа с корзиной, системой оплаты, личным кабинетом, админ-панелью и интеграцией с доставкой',
-      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop',
-      technologies: ['PHP', 'Laravel', 'MySQL', 'JavaScript', 'Vue.js', 'Payment Gateway', 'API', 'Admin Panel'],
-      demoAvailable: false,
+      id: 6,
+      title: 'Сеть отелей "Подушкин"',
+      description: 'Крупная сеть премиум-отелей на час в Москве с более чем 200 тематическими номерами. Полнофункциональная система бронирования, управления контентом и онлайн-оплаты. Включает административную панель, интеграцию платежных систем и мультиязычную поддержку',
+      image: '/src/assets/screenshots/podushkin.png',
+      technologies: ['PHP', 'Laravel', 'PostgreSQL', 'JavaScript', 'Vue.js', 'REST API', 'Payment Gateway', 'CMS', 'Multi-language'],
+      demo: 'https://podushkin.ru/',
+      demoAvailable: true,
+      featured: true,
+      isPrivate: true
+    },
+
+    {
+      id: 7,
+      title: 'Shopiforge - Платформа для интернет-магазинов',
+      description: 'Комплексная платформа для создания и управления интернет-магазинами. Включает систему мультиканальных продаж, интеграцию с маркетплейсами, аналитику и CRM. Поддержка различных тарифов и персонализированных решений для бизнеса любого масштаба',
+      image: '/src/assets/screenshots/shopiforge.png',
+      technologies: ['PHP', 'JavaScript', 'Vue.js', 'Laravel', 'E-commerce Platform', 'Multi-channel Sales', 'CRM', 'Analytics'],
+      demo: 'https://shopiforge.com/',
+      demoAvailable: true,
       featured: false,
       isPrivate: true
     },
-    {
-      id: 11,
-      title: 'Система онлайн-бронирования гостиницы',
-      description: 'Веб-приложение для бронирования номеров с календарём занятости, онлайн-оплатой и интеграцией с внешними сервисами бронирования',
-      image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop',
-      technologies: ['PHP', 'Laravel', 'PostgreSQL', 'JavaScript', 'Vue.js', 'Calendar API', 'Payment System'],
-      demoAvailable: false,
-      featured: false,
-      isPrivate: true
-    },
-    {
-      id: 12,
-      title: 'Платформа для онлайн-курсов',
-      description: 'LMS платформа с видеолекциями, тестами, прогресс-трекингом и системой оплаты за обучение',
-      image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&h=400&fit=crop',
-      technologies: ['PHP', 'Laravel', 'MySQL', 'JavaScript', 'Vue.js', 'Video Player', 'Payment Gateway'],
-      demoAvailable: false,
-      featured: false,
-      isPrivate: true
-    }
+
   ])
 
   // Языки
